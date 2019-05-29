@@ -19,3 +19,7 @@ JRD is a CentOS 7 based OS which is installed with the following software
 JRD can be deployed to any cloud platform that supports CentOS 7.
 
 Please follow the instructions in subdirectories
+
+## Issues
+
+Please report issues [here](https://github.com/jarvisgroup/Jarvis_remote_desktop/issues)
