@@ -58,10 +58,7 @@ Prerequisites:
   Click `CREATE` button
   ```
 
-* Verify
-
-* Verify
-
+* Verify startup script
   ```bash
   #Connect to the instance with SSH buttom
   ls /tmp/_*
