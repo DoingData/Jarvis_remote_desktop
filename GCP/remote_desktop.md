@@ -175,7 +175,7 @@ cd ~/apps/idea-IC-191.7479.19/
 
 GCP charges running instances by minutes. 2vCPU and 7.5GB will cost you around $50-55 per month. Therefore, make sure you stop your instance every day to save costs. 
 
-![image-20190528220143701](/Users/Edward/Library/Application Support/typora-user-images/image-20190528220143701.png)
+![image-20190528220143701](assets/image-20190528220143701.png)
 
 When you restart your instance next time. You will get a new external/public IP, so make sure you update your VNC connection properties. 
 
