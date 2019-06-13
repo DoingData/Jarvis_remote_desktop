@@ -100,7 +100,7 @@ CentOS and RHEL: /var/log/messages
 
 * Change picture quaility if slow
 
-![image-20190528153741947](/Users/Edward/Library/Application Support/typora-user-images/image-20190528153741947.png)
+![image-20190528153741947](assets/image-20190528153741947.png)
 
 ### Troubleshooting
 
