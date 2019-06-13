@@ -1,6 +1,6 @@
-## Create VPC Firewall rules for VNC ports
+[TOC]
 
-### Setup firewalls
+## Setup firewalls
 
 - In GCP console, search for  `vpc firewall rules`
 
@@ -19,7 +19,7 @@
 
 - Click `CREATE`
 
-#### Create a remote desktop VM instance
+## Creating a VM Instance
 
 * Menu > Comupte Engine > VM instances
 
@@ -39,11 +39,13 @@
   Check `Allow HTTPS traffic`
   
   Click `Management, security, disks, networking, sole tenancy
-    Startup script=copy ./remote_desktop_init.sh
-    Network tab > Network tags=vnc
+    - copy `./remote_desktop_init.sh` to startup script text box
+    - In Network tab, set `Network tags=vnc`
+  
+  Click `CREATE` button
   ```
 
-* Click `CREATE`
+* Verify
 
 * Verify
 
@@ -51,10 +53,10 @@
   #Connect to the instance with SSH buttom
   ls /tmp/_*
   
-  #/tmp/_start_datetime file indicate startup script start time
-  #/tmp/_finish_datetime file indicate startup script finish time
+  #/tmp/_start_{datetime} file indicate startup script start time
+  #/tmp/_finish_{datetime} file indicate startup script finish time
   
-  #If you dont see _finish_datetime file in a while..go to troubleshooting section.
+  #If you dont see _finish_{datetime} file in a while..go to troubleshooting section.
   ```
 
 #### Troubleshooting
@@ -68,9 +70,7 @@ startup script log file
 CentOS and RHEL: /var/log/messages
 ```
 
-### Connect to Remote Server
-
-#### Remote desktop
+## Accessing JRD
 
 * Install `RealVNC` viewer
 
@@ -92,38 +92,41 @@ CentOS and RHEL: /var/log/messages
 
 ![image-20190528153741947](/Users/Edward/Library/Application Support/typora-user-images/image-20190528153741947.png)
 
-##### Troubleshooting
+### Troubleshooting
 
 * 1. Check vncserver service status
 
-  2. 1. `sudo systemctl status vncserver@:1.service`
+  2. `sudo systemctl status vncserver@:1.service`
 
   3. Check current running vncserver displays
 
-  4. 1. `vncserver -list`
+  4. `vncserver -list`
 
   5. Vncserver log and config location
 
-  6. 1. `cd ~/.vnc/` 
+  6. `cd ~/.vnc/` 
 
-### Install Docker
+## Configuring JRD
 
-Change `centos` user password.
+Update password for `centos` user
 
 ```bash
 sudo su
-#you can ignore `BAD PASSWORD: The password contains the ..`
-#it's just a warning
-#make your password simple
+
+#set a password for centos user
 passwd "centos"
 
 vim ~/accounts
-#write down the passwod (bad practice, do not do this in production)
+#Write down your password 
+#(bad practice, do not do this in production)
 ```
 
-```
+### Install Docker
+
+```bash
 sudo su
-#copy and paste docker_install.sh to termial
+#run docker_install.sh in termial 
+#(or just copy, paste and run cmd in termal)
 #instance will reboot 
 
 #verify
