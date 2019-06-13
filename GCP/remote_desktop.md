@@ -1,5 +1,5 @@
 [TOC]
-## Jarvis Remote Desktop on GCP
+# Jarvis Remote Desktop with GCP
 
 Jarvis Remote Desktop (JRD) is a CentOS 7 based server which is installed with the following softwares
 
@@ -69,7 +69,7 @@ Prerequisites:
   #If you dont see _finish_{datetime} file in a while..go to troubleshooting section.
   ```
 
-#### Troubleshooting
+### Troubleshooting
 
 https://cloud.google.com/compute/docs/startupscript
 
